@@ -23,13 +23,13 @@
         <link rel="stylesheet" href="index.css">
         <script src="https://kit.fontawesome.com/cefc19ce63.js" crossorigin="anonymous"></script>--%>
     </head>
-    <body>
+    <body  style="background: linear-gradient(to right, #1c237f, #800080);">
         
     <center>
         <br>
         <br>
         <br>
-    <h1>
+    <h1  style="color: #ffffff;">
         LOGIN DIADIA       
     </h1>
 </center>
