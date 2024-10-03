@@ -42,12 +42,28 @@
             <br>
             <input hidden type="text" name="action" value="login">
             <input type="email" placeholder="Correo" name="correo" required>
-            <input type="password" placeholder="Contraseña" name="password" required>
+            <div class="conteContra">
+            <input type="password" id="password"  placeholder="Contraseña" name="password" required> 
+                 <button type="button" id="togglePassword">
+                        <i id="eyeIcon" class="fas fa-eye"></i>
+                 </button>
+            </div>
                 <br>
                 <button type="submit">INGRESAR</button>
             </form>
         </div>
 
+        <script>
+            const togglePassword = document.getElementById('togglePassword');
+                        const password = document.getElementById('password');
+                        const eyeIcon = document.getElementById('eyeIcon');
+
+                        togglePassword.addEventListener('click', function () {
+                            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                            password.setAttribute('type', type);
+                            eyeIcon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
+                        });
+        </script>
         <script src="index.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
